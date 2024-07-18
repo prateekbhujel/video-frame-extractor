@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Frame Extractor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./src/lib//jquery-3.5.1.min.js"></script>
+  <script src="./src/lib/jszip.min.js"></script>
+  <script src="./src/lib/FileSaver.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-film"></i> Video Frame Extractor</h1>
+      <button id="toggleTheme" class="btn-toggle"><i class="fas fa-sun"></i></button>
+    </header>
+    <main>
+      <div class="input-section">
+        <div class="form-group">
+          <label for="videoUpload"><i class="fas fa-upload"></i> Upload Video</label>
+          <input type="file" id="videoUpload" accept="video/*">
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+      </div>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Processing video frames...</p>
+      </div>
+      <div class="frame-controls">
+        <button id="toggleSelect" class="btn"><i class="fas fa-check-square"></i> Select All</button>
+        <button id="downloadSelected" class="btn"><i class="fas fa-download"></i> Download Selected</button>
+        <button id="downloadAll" class="btn"><i class="fas fa-file-archive"></i> Download All as Zip</button>
+      </div>
+      <div id="frames" class="frame-container"></div>
+    </main>
+    <footer>
+      <p>Made with <i class="fas fa-heart"></i> by Pratik Bhujel.</p>
+    </footer>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+</html>
