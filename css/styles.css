@@ -47,10 +47,6 @@ h1 {
   color: var(--primary-color);
 }
 
-h1:hover {
-  color: var(--text-color);
-}
-
 .btn, .btn-toggle {
   background-color: var(--primary-color);
   color: white;
@@ -65,12 +61,6 @@ h1:hover {
 .btn:hover, .btn-toggle:hover {
   background-color: darken(var(--primary-color), 10%);
   transform: translateY(-2px);
-  color: green;
-}
-
-.btn:disabled, .btn-toggle:disabled {
-  background-color: grey;
-  cursor: not-allowed;
 }
 
 .btn-toggle {
@@ -186,11 +176,6 @@ input[type="file"], input[type="text"] {
   transform: translateY(-2px);
 }
 
-.frame-download:disabled {
-  background-color: grey;
-  cursor: not-allowed;
-}
-
 .error-message {
   color: #d9534f;
   background-color: #f2dede;
@@ -213,13 +198,11 @@ footer {
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-  .frame-controls {
-    flex-direction: column;
-  }
 
-  .frame-controls .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+.install-btn {
+  margin-bottom: 13px;
+}
+
+.install-btn:hover{
+  color: darkred;
 }
